@@ -1,4 +1,4 @@
-pipelne {
+pipeline {
 	agent any
 	stages{
 		stage('Init'){
