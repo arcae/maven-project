@@ -22,7 +22,7 @@ pipeline {
         }  
 	    stage('Deploy to Staging'){
 	        steps{
-	            sh "scp -o "StrictHostKeyChecking=no" -i /home/regi/MyEC2Virginia.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat/webapps"
+	            sh "scp -i /home/regi/MyEC2Virginia.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat/webapps"
 
 	        }
 	    }
